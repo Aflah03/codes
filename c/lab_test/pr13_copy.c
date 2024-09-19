@@ -32,7 +32,7 @@ void SLL_PRINT_LIST_IN_REVERSE_ORDER_USING_RECURSION(Node *temp) {
   if (temp == NULL)
     return;
   SLL_PRINT_LIST_IN_REVERSE_ORDER_USING_RECURSION(temp->next);
-  printf("%d", temp->data);
+  printf("%d ", temp->data);
 }
 void SLL_PRINT_LIST(Node *head) {
   Node *temp = head->next;
@@ -50,7 +50,7 @@ Node *CONVERT_TO_SLL(char arr[]) {
       item++;
     } else {
       int value = *item - '0';
-      // printf("the value is %d\n", value);
+      printf("the value is %d\n", value);
       temp->next = getNode();
       temp = temp->next;
       temp->data = value;
@@ -70,7 +70,7 @@ Node *CONVERT_TO_SLL_IN_REVERSE(char arr[]) {
     n++;
   }
   item = arr;
-  // printf("n is : %d", n);
+  printf("n is : %d", n);
   for (int i = n - 1; i >= 0; i--) {
     // printf("the value of i in loop is %d", i);
 
@@ -78,7 +78,7 @@ Node *CONVERT_TO_SLL_IN_REVERSE(char arr[]) {
       continue;
     } else {
       int value = *(item + i) - '0';
-      // printf("the value is %d\n", value);
+      printf("the value is %d\n", value);
       temp->next = getNode();
       temp = temp->next;
       temp->data = value;
@@ -161,6 +161,5 @@ int main() {
   Node *result = ADD_TWO_SLL(
       number1, number2); // adding from right of number to left thats
   //
-  printf("Result: " );
   SLL_PRINT_LIST_IN_REVERSE_ORDER_USING_RECURSION(result->next);
 }

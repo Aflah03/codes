@@ -104,21 +104,22 @@ int main() {
       Queue =>   enqueue-  insert at the end
      *            dequeue-  remove from the beginging
      */
-      while (true) {
-        int flag = 0;
         printf("1-Push: \n");
         printf("2-Pop: \n");
         printf("3- Print Stack\n");
         printf("4- EXIT\n");
+      while (true) {
+        int flag = 0;
         printf("option: ");
         scanf("%d", &operation);
         getchar();
         switch (operation) {
         case 1:
-          printf("Enter number to push\n");
+          printf("Enter number to push: ");
           scanf("%d", &item);
           getchar();
           SLL_INSERT_AT_END(Shead, item);
+              printf("pushed %d to the stack\n",item);
           break;
         case 2:
           item = SLL_REMOVE_FROM_END(Shead);
@@ -137,6 +138,7 @@ int main() {
         case 4:
           return 0;
         }
+          printf("--------------------------------\n");
       }
 
       break;
@@ -145,20 +147,21 @@ int main() {
       // Queue
       //
 
-      while (true) {
-        int flag = 0;
         printf("1-ENQUEUE: \n");
         printf("2-DEQUEUE: \n");
         printf("3- Print QUEUE \n");
         printf("4- EXIT\n");
+      while (true) {
+        int flag = 0;
         printf("option: ");
         scanf("%d", &operation);
         getchar();
         switch (operation) {
         case 1:
-          printf("Enter number to enqueue\n");
+          printf("Enter number to enqueue: ");
           scanf("%d", &item);
           getchar();
+              printf("Enqueued %d onto to the queue\n",item);
           SLL_INSERT_AT_END(Qhead, item);
           break;
         case 2:
@@ -179,6 +182,7 @@ int main() {
           return 0;
         }
           
+          printf("--------------------------------\n");
       }
       break;
     case 3:
