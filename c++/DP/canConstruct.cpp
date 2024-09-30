@@ -15,6 +15,7 @@ bool canConstruct(string target,vector<string>& wordBank,unordered_map<string,in
         }
     }
     memo[target] = false;
+    s
     return false;
 }
 

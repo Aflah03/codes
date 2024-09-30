@@ -1,6 +1,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -88,6 +89,8 @@ int main() {
       case '*':
         value = x * y;
         break;
+      case '^':
+        value = pow(x,y);
       }
       STACK_PUSH(S, value);
     }

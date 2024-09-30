@@ -30,3 +30,4 @@ else
     # Clean up
     rm errors.txt
 fi
+

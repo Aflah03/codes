@@ -142,6 +142,12 @@ Node *ADD_TWO_SLL(Node *list1, Node *list2) {
     temp->data = value;
     temp2 = temp2->next;
   }
+  if(carry!= 0){
+    temp->next = getNode();
+    temp = temp->next;
+    temp->data = carry;
+
+  }
   return HEAD_OF_FINAL_RESULT;
 }
 
