@@ -5,6 +5,6 @@ int main(){
     scanf("%d",&n);
 
     while(n >0){
-        
+    
     }
 }
